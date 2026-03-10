@@ -20,6 +20,14 @@ A Java Swing + MySQL desktop application that simulates a role-based online stor
 - MySQL (`online_store_db`)
 - SQL queries for CRUD operations (users, items, orders, order_items, coupons)
 
+
+### Screenshots
+![Login Screen](assets/onlinestoreDBsc1.png)
+![Customer Dashboard](assets/onlinestoreDBsc2.png)
+![Admin Inventory](assets/onlinestoreDBsc3.png)
+
+
+
 ### Database Setup
 1. Create a MySQL database schema named:
    - `online_store_db`
@@ -49,3 +57,10 @@ Use placeholders in the public repo:
 - Completed as a solo final project for a Database Systems course.
 - Build artifacts (e.g., `.jar` files in an `artifacts/` folder) are not required for running from source and are typically excluded from version control.
 - Recommended: add screenshots of the GUI to an `assets/` folder and link them here.
+
+**Dependency Note (MySQL JDBC Driver):**  
+This project requires the MySQL JDBC driver (MySQL Connector/J). If it is not already included, add the Connector/J `.jar` to your project libraries/classpath in IntelliJ before running.
+
+**MySQL Connector/J:**  
+If you see a “No suitable driver” or connection error, add MySQL Connector/J to the project classpath (IntelliJ: File → Project Structure → Libraries → +).
+
