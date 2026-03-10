@@ -1,17 +1,15 @@
 
 ## Online Store Database Application (Solo Project)
-Java Swing + MySQL application implementing a role-based online store system with separate Customer, Employee, and Admin workflows.
+A Java Swing + MySQL desktop application that simulates a role-based online store system. Built with a normalized relational schema (`online_store_db`) and SQL-driven GUI workflows for Customers, Employees, and Admins.
 
 ### Features
 **Customer**
-- Browse items and view item details
-- Add/remove items from cart
-- Place orders, view order history, cancel orders
-- Update account information
+- Browse items, manage a cart, and place orders
+- View order history, cancel orders, and update account information
 
 **Employee**
-- Manage store items (add/update/remove)
-- View customer accounts and orders
+- Manage store inventory (add/update/remove items)
+- View customer accounts and customer orders
 
 **Admin**
 - Manage employee and customer accounts
@@ -20,22 +18,34 @@ Java Swing + MySQL application implementing a role-based online store system wit
 ### Tech Stack
 - Java (IntelliJ) + Swing (GUI)
 - MySQL (`online_store_db`)
-- SQL queries for CRUD operations and role-based workflows
+- SQL queries for CRUD operations (users, items, orders, order_items, coupons)
 
-### Database Design
-- Normalized relational schema supporting products/items, users/roles, orders, and order_items
-- Supports multi-role access and order lifecycle management
+### Database Setup
+1. Create a MySQL database schema named:
+   - `online_store_db`
+2. Run the SQL script(s) in the `sql/` folder (recommended order):
+   - `sql/schema.sql`
+   - `sql/seed.sql` (optional, if included)
+
+### Database Configuration (Simple)
+This project connects to a local MySQL instance. For a public GitHub repo, credentials are not included.
+
+Update the database username/password in:
+- `Database.java` (contains the `jdbc:mysql` / `DriverManager.getConnection` logic)
+
+Use placeholders in the public repo:
+- DB user: `YOUR_DB_USER`
+- DB password: `YOUR_DB_PASSWORD`
 
 ### How to Run
-1. Clone the repo
-2. Create the database in MySQL:
-   - Create schema: `online_store_db`
-   - Run the SQL scripts in `/sql` (if included) or follow the schema steps below
-3. Update DB credentials in the code:
-   - `[point to the exact file/class where connection settings live]`
-4. Run the project in IntelliJ:
-   - Start from `[your main class name]`
+1. Clone the repository
+2. Open the project in IntelliJ (or VS Code with Java support)
+3. Complete the **Database Setup** steps above
+4. Update DB credentials in `Database.java`
+5. Run the application by running:
+   - `LoginFrame.java` (contains `public static void main`)
 
 ### Notes
-- This project was completed as a solo final project for a Database Systems course.
-- If you’d like, you can add screenshots in an `/assets` folder and link them here.
+- Completed as a solo final project for a Database Systems course.
+- Build artifacts (e.g., `.jar` files in an `artifacts/` folder) are not required for running from source and are typically excluded from version control.
+- Recommended: add screenshots of the GUI to an `assets/` folder and link them here.
