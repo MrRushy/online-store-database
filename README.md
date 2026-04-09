@@ -25,6 +25,14 @@ This project models the core workflows of an online store using a desktop GUI ba
 - Manage employee and customer accounts
 - Control order lifecycle and status updates
 
+## Core Workflow
+
+- Users create an account and sign in to access the system
+- Users can manage personal calendar events within their own schedule
+- Users can create or join groups for shared planning
+- Group events can be created and viewed through the shared calendar workflow
+- Admins can manage users, groups, and related calendar data
+
 ## Tech Stack
 
 - Java
